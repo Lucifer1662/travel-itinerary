@@ -1,0 +1,66 @@
+{
+  "id": "nara",
+  "name": "Nara",
+  "icon": "🦌",
+  "description": "Sacred deer and giant Buddha",
+  "coordinates": [34.6851, 135.8048],
+  "thingsToDo": [
+    {
+      "name": "Nara Park & Sacred Deer",
+      "description": "Interact with over 1,000 sacred deer roaming freely throughout the historic park.",
+      "cost": "Free",
+      "duration": "2-3 hours",
+      "coordinates": [34.6851, 135.8048],
+      "bestPhotoSpots": [
+        {
+          "name": "Deer feeding areas",
+          "link": "https://www.japan-guide.com/e/e4103.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Nara Park Guide",
+          "link": "https://www.japan-guide.com/e/e4103.html"
+        }
+      ]
+    },
+    {
+      "name": "Todaiji Temple Great Buddha",
+      "description": "Housing one of Japan's largest bronze Buddha statues in the world's largest wooden building.",
+      "cost": "¥600",
+      "duration": "1-2 hours",
+      "coordinates": [34.6890, 135.8398],
+      "bestPhotoSpots": [
+        {
+          "name": "Great Buddha Hall",
+          "link": "https://www.todaiji.or.jp/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Temple Website",
+          "link": "https://www.todaiji.or.jp/en/"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Kintetsu Nara Line",
+      "description": "From Kyoto/Osaka",
+      "link": "https://www.kintetsu.com/foreign/english/"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Any time",
+      "months": "Year-round",
+      "description": "Great for day trips",
+      "link": "https://www.japan-guide.com/e/e4100.html"
+    }
+  ],
+  "safetyTips": [
+    "Deer can be aggressive when hungry - don't tease them",
+    "Buy deer crackers from official vendors only"
+  ]
+}

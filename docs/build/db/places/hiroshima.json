@@ -1,0 +1,70 @@
+{
+  "id": "hiroshima",
+  "name": "Hiroshima",
+  "icon": "🕊️",
+  "description": "Peace memorial and floating torii",
+  "coordinates": [34.3853, 132.4553],
+  "thingsToDo": [
+    {
+      "name": "Peace Memorial Park",
+      "description": "Moving memorial dedicated to victims of the atomic bomb with museum and monuments.",
+      "cost": "Free (park), ¥200 (museum)",
+      "duration": "2-3 hours",
+      "coordinates": [34.3955, 132.4536],
+      "bestPhotoSpots": [
+        {
+          "name": "Peace Memorial Monument",
+          "link": "https://www.japan-guide.com/e/e3400.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Peace Memorial Park Guide",
+          "link": "https://www.japan-guide.com/e/e3400.html"
+        }
+      ]
+    },
+    {
+      "name": "Miyajima & Itsukushima Shrine",
+      "description": "Sacred island with famous floating torii gate, one of Japan's three scenic views.",
+      "cost": "¥300 (shrine), ¥200 (ferry)",
+      "duration": "Half day",
+      "coordinates": [34.2958, 132.3198],
+      "bestPhotoSpots": [
+        {
+          "name": "Floating torii gate",
+          "link": "https://www.japan-guide.com/e/e3450.html"
+        },
+        {
+          "name": "Mt. Misen views",
+          "link": "https://www.japan-guide.com/e/e3450.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Miyajima Tourism",
+          "link": "https://www.japan-guide.com/e/e3450.html"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Hiroshima Streetcar",
+      "description": "Historic tram system",
+      "link": "https://www.japan-guide.com/e/e3401.html"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Spring/Fall",
+      "months": "March-May, Sept-Nov",
+      "description": "Pleasant weather for sightseeing",
+      "link": "https://www.japan-guide.com/e/e3400.html"
+    }
+  ],
+  "safetyTips": [
+    "Allow enough time for ferry to Miyajima",
+    "Check tide schedules for torii gate views"
+  ]
+}

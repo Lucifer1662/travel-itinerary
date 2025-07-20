@@ -1,0 +1,232 @@
+{
+  "id": "tokyo",
+  "name": "Tokyo",
+  "icon": "🏙️",
+  "description": "Modern metropolis meets traditional culture",
+  "coordinates": [35.6762, 139.6503],
+  "thingsToDo": [
+    {
+      "name": "Shibuya Crossing",
+      "description": "The world's busiest pedestrian crossing with up to 3,000 people crossing at once during peak times.",
+      "cost": "Free",
+      "duration": "15-30 mins",
+      "coordinates": [35.6598, 139.7006],
+      "bestPhotoSpots": [
+        {
+          "name": "Starbucks QFRONT 2F",
+          "link": "https://www.starbucks.co.jp/store/search/detail.php?id=1006"
+        },
+        {
+          "name": "MAGNET by SHIBUYA109",
+          "link": "https://magnetbyshibuya109.jp/"
+        },
+        {
+          "name": "L'Occitane Cafe",
+          "link": "https://loccitane.co.jp/pages/cafe-shibuya"
+        },
+        {
+          "name": "Shibuya Sky",
+          "link": "https://www.shibuya-scramble-square.com/sky/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Official Tourism Site",
+          "link": "https://www.gotokyo.org/en/spot/6/index.html"
+        }
+      ]
+    },
+    {
+      "name": "Senso-ji Temple",
+      "description": "Tokyo's oldest and most significant Buddhist temple.",
+      "cost": "Free",
+      "duration": "1-2 hours",
+      "coordinates": [35.7148, 139.7967],
+      "bestPhotoSpots": [
+        {
+          "name": "Kaminarimon Gate",
+          "link": "https://www.senso-ji.jp/english/"
+        },
+        {
+          "name": "Main temple grounds",
+          "link": "https://www.senso-ji.jp/english/"
+        },
+        {
+          "name": "Five-story pagoda",
+          "link": "https://www.senso-ji.jp/english/"
+        },
+        {
+          "name": "Nakamise shopping street",
+          "link": "https://www.gotokyo.org/en/spot/6/index.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Official Temple Website",
+          "link": "https://www.senso-ji.jp/english/"
+        }
+      ]
+    },
+    {
+      "name": "Tokyo Skytree",
+      "description": "World's tallest tower with observation decks.",
+      "cost": "¥2,060-3,200",
+      "duration": "2-3 hours",
+      "coordinates": [35.7101, 139.8107],
+      "bestPhotoSpots": [
+        {
+          "name": "350m deck",
+          "link": "https://www.tokyo-skytree.jp/en/floor/tembo-deck/"
+        },
+        {
+          "name": "450m deck",
+          "link": "https://www.tokyo-skytree.jp/en/floor/tembo-galleria/"
+        },
+        {
+          "name": "Ground level plaza",
+          "link": "https://www.tokyo-skytree.jp/en/"
+        },
+        {
+          "name": "Sumida River view",
+          "link": "https://www.gotokyo.org/en/spot/6/index.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Official Skytree Website",
+          "link": "https://www.tokyo-skytree.jp/en/"
+        }
+      ]
+    },
+    {
+      "name": "Harajuku & Takeshita Street",
+      "description": "Tokyo's youth fashion hub, packed with quirky shops, crepe stands, and pop culture.",
+      "cost": "Free to explore",
+      "duration": "1-2 hours",
+      "coordinates": [35.6702, 139.7026],
+      "bestPhotoSpots": [
+        {
+          "name": "Takeshita Street Entrance",
+          "link": "https://www.japan-guide.com/e/e3006.html"
+        },
+        {
+          "name": "Harajuku Station",
+          "link": "https://www.japan-guide.com/e/e3006.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Area Guide",
+          "link": "https://www.japan-guide.com/e/e3006.html"
+        }
+      ]
+    },
+    {
+      "name": "Akihabara",
+      "description": "The center of otaku culture, electronics, anime, and manga. Visit maid cafes, arcades, and specialty stores.",
+      "cost": "Free to explore",
+      "duration": "2-3 hours",
+      "coordinates": [35.7022, 139.7742],
+      "bestPhotoSpots": [
+        {
+          "name": "Akihabara Electric Town",
+          "link": "https://www.japan-guide.com/e/e3003.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Akihabara Guide",
+          "link": "https://www.japan-guide.com/e/e3003.html"
+        }
+      ]
+    },
+    {
+      "name": "Ueno Park & Museums",
+      "description": "A large public park with museums, a zoo, and cherry blossoms in spring.",
+      "cost": "Free (park), museum fees vary",
+      "duration": "2-4 hours",
+      "coordinates": [35.7140, 139.7744],
+      "bestPhotoSpots": [
+        {
+          "name": "Ueno Zoo",
+          "link": "https://www.tokyo-zoo.net/english/ueno/"
+        },
+        {
+          "name": "Tokyo National Museum",
+          "link": "https://www.tnm.jp/?lang=en"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Ueno Park Guide",
+          "link": "https://www.japan-guide.com/e/e3019.html"
+        }
+      ]
+    },
+    {
+      "name": "Tsukiji Outer Market",
+      "description": "Famous for fresh seafood, sushi, and street food.",
+      "cost": "Free to browse",
+      "duration": "1-2 hours",
+      "coordinates": [35.6654, 139.7707],
+      "bestPhotoSpots": [],
+      "resources": [
+        {
+          "name": "Tsukiji Market Info",
+          "link": "https://www.tsukiji.or.jp/english/"
+        }
+      ]
+    },
+    {
+      "name": "teamLab Borderless",
+      "description": "Immersive digital art museum in Odaiba.",
+      "cost": "¥3,200",
+      "duration": "1-2 hours",
+      "coordinates": [35.6256, 139.7756],
+      "bestPhotoSpots": [],
+      "resources": [
+        {
+          "name": "teamLab Borderless",
+          "link": "https://borderless.teamlab.art/"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "PASMO/Suica IC Card",
+      "description": "For easy transit",
+      "link": "https://www.pasmo.co.jp/visitors/en/"
+    },
+    {
+      "name": "JR Pass",
+      "description": "If planning multiple city visits",
+      "link": "https://japanrailpass.net/en/"
+    },
+    {
+      "name": "Japan Travel by NAVITIME",
+      "description": "Navigation app",
+      "link": "https://www.navitime.com/en/"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Spring",
+      "months": "March-May",
+      "description": "Cherry blossoms, mild weather",
+      "link": "https://www.japan-guide.com/e/e3050.html"
+    },
+    {
+      "season": "Fall",
+      "months": "Sept-Nov",
+      "description": "Autumn colors, comfortable temperatures",
+      "link": "https://www.japan-guide.com/e/e3050.html"
+    }
+  ],
+  "safetyTips": [
+    "Tokyo is generally very safe",
+    "Keep passport copy separate from original",
+    "Have your hotel's address in Japanese",
+    "Use Google Maps for offline maps"
+  ]
+}
