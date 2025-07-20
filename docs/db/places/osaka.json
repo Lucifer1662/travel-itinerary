@@ -1,0 +1,97 @@
+{
+  "id": "osaka",
+  "name": "Osaka",
+  "icon": "🍜",
+  "description": "Japan's kitchen and street food paradise",
+  "coordinates": [34.6937, 135.5023],
+  "thingsToDo": [
+    {
+      "name": "Dotonbori",
+      "description": "Vibrant entertainment district famous for food, neon signs, and the iconic Glico running man.",
+      "cost": "Free",
+      "duration": "2-3 hours",
+      "coordinates": [34.6685, 135.5011],
+      "bestPhotoSpots": [
+        {
+          "name": "Glico Running Man sign",
+          "link": "https://www.glico.com/global/about/advertising/glico-sign/"
+        },
+        {
+          "name": "Ebisu Bridge",
+          "link": "https://www.japan-guide.com/e/e4001.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Area Guide",
+          "link": "https://www.japan-guide.com/e/e3801.html"
+        }
+      ]
+    },
+    {
+      "name": "Osaka Castle",
+      "description": "Iconic castle with museum and park, offering great city views.",
+      "cost": "¥600",
+      "duration": "2-3 hours",
+      "coordinates": [34.6873, 135.5262],
+      "bestPhotoSpots": [
+        {
+          "name": "Nishinomaru Garden",
+          "link": "https://osakacastlepark.jp/en/"
+        },
+        {
+          "name": "Top floor observation deck",
+          "link": "https://www.osakacastle.net/english/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Official Castle Website",
+          "link": "https://www.osakacastle.net/english/"
+        }
+      ]
+    },
+    {
+      "name": "Kuromon Ichiba Market",
+      "description": "Local food market with fresh seafood and Osaka street food specialties.",
+      "cost": "Free entry",
+      "duration": "1-2 hours",
+      "coordinates": [34.6639, 135.5056],
+      "bestPhotoSpots": [
+        {
+          "name": "Market entrance gate",
+          "link": "https://www.kuromon.com/en/"
+        },
+        {
+          "name": "Fresh seafood stalls",
+          "link": "https://www.kuromon.com/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Market Information",
+          "link": "https://www.kuromon.com/en/"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Osaka Metro",
+      "description": "Efficient subway system",
+      "link": "https://subway.osakametro.co.jp/en/"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Spring/Fall",
+      "months": "March-May, Sept-Nov",
+      "description": "Pleasant weather for exploring",
+      "link": "https://www.japan-guide.com/e/e4000.html"
+    }
+  ],
+  "safetyTips": [
+    "Try the local food but be adventurous gradually",
+    "Crowded areas - watch belongings"
+  ]
+}

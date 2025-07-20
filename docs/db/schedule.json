@@ -1,0 +1,420 @@
+{
+  "trip": {
+    "title": "Epic Japan Adventure",
+    "subtitle": "18-Day Cultural & Culinary Journey Through Japan's Heartland",
+    "stats": {
+      "days": 18,
+      "cities": 8,
+      "michelinStars": "15+",
+      "memories": "∞"
+    }
+  },
+  "destinations": {
+    "tokyo": [35.6762, 139.6503],
+    "fuji": [35.3606, 138.7274],
+    "hakone": [35.2323, 139.1068],
+    "kyoto": [35.0116, 135.7681],
+    "nara": [34.6851, 135.8048],
+    "osaka": [34.6937, 135.5023],
+    "hiroshima": [34.3853, 132.4553],
+    "kanazawa": [36.5944, 136.6256]
+  },
+  "itinerary": {
+    "1": {
+      "title": "Day 1: Tokyo Arrival & First Impressions",
+      "location": "tokyo",
+      "accommodation": {
+        "name": "Shibuya Hotel",
+        "coordinates": [35.6598, 139.7006],
+        "toFirstActivity": { "method": "🚶 Walking", "time": "5 min", "to": "Shibuya Crossing" },
+        "fromLastActivity": { "method": "🚶 Walking", "time": "8 min", "from": "dinner location" }
+      },
+      "routes": [
+        { "from": "Narita Airport", "to": "Shibuya Hotel", "transport": "Limousine Bus", "duration": "60 min" }
+      ],
+      "activities": [
+        {
+          "time": "10:30",
+          "name": "Shibuya Crossing experience",
+          "coordinates": [35.6595, 139.7006],
+          "duration": "30 min",
+          "transport": { "method": "🚶 Walking", "time": "5 min", "from": "hotel" }
+        },
+        {
+          "time": "11:00", 
+          "name": "Starbucks QFRONT observation",
+          "coordinates": [35.6596, 139.7005],
+          "duration": "30 min",
+          "transport": { "method": "🚶 Walking", "time": "2 min", "from": "Shibuya Crossing" }
+        },
+        {
+          "time": "12:30",
+          "name": "High-end sushi lunch",
+          "coordinates": [35.6719, 139.7648],
+          "duration": "90 min",
+          "transport": { "method": "🚇 Metro", "time": "15 min", "from": "Shibuya to Ginza" }
+        },
+        {
+          "time": "14:30",
+          "name": "Harajuku exploration",
+          "coordinates": [35.6702, 139.7026],
+          "duration": "120 min",
+          "transport": { "method": "🚇 Metro", "time": "12 min", "from": "Ginza to Harajuku" }
+        },
+        {
+          "time": "19:00",
+          "name": "Michelin star dinner",
+          "coordinates": [35.6690, 139.7040],
+          "duration": "120 min",
+          "transport": { "method": "🚶 Walking", "time": "8 min", "from": "Harajuku area" }
+        }
+      ],
+      "transportation": ["🚌 Limousine Bus", "🚶 Walking", "🚇 Metro"]
+    },
+    "2": {
+      "title": "Day 2: Traditional Tokyo",
+      "location": "tokyo",
+      "accommodation": {
+        "name": "Shibuya Hotel",
+        "coordinates": [35.6598, 139.7006],
+        "toFirstActivity": { "method": "🚇 Metro", "time": "20 min", "to": "Tsukiji Market" },
+        "fromLastActivity": { "method": "🚶 Walking", "time": "10 min", "from": "Ginza dinner" }
+      },
+      "routes": [
+        { "from": "Hotel", "to": "Tsukiji", "transport": "Metro", "duration": "20 min" },
+        { "from": "Tsukiji", "to": "Asakusa", "transport": "Metro", "duration": "15 min" },
+        { "from": "Asakusa", "to": "Ueno", "transport": "Walking", "duration": "20 min" }
+      ],
+      "activities": [
+        {
+          "time": "07:30",
+          "name": "Tsukiji Outer Market breakfast",
+          "coordinates": [35.6654, 139.7707],
+          "duration": "90 min",
+          "transport": { "method": "🚇 Metro", "time": "20 min", "from": "Shibuya Hotel" }
+        },
+        {
+          "time": "09:30",
+          "name": "Senso-ji Temple visit",
+          "coordinates": [35.7148, 139.7967],
+          "duration": "90 min",
+          "transport": { "method": "🚇 Metro", "time": "15 min", "from": "Tsukiji" }
+        },
+        {
+          "time": "11:30",
+          "name": "Ueno Park and museums",
+          "coordinates": [35.7140, 139.7744],
+          "duration": "180 min",
+          "transport": { "method": "🚶 Walking", "time": "20 min", "from": "Asakusa" }
+        },
+        {
+          "time": "15:00",
+          "name": "Imperial Palace gardens",
+          "coordinates": [35.6852, 139.7528],
+          "duration": "120 min",
+          "transport": { "method": "🚇 Metro", "time": "25 min", "from": "Ueno" }
+        },
+        {
+          "time": "19:00",
+          "name": "Traditional tempura dinner",
+          "coordinates": [35.6719, 139.7648],
+          "duration": "90 min",
+          "transport": { "method": "🚶 Walking", "time": "10 min", "from": "Imperial Palace area" }
+        }
+      ],
+      "transportation": ["🚇 Metro", "🚶 Walking"]
+    },
+    "3": {
+      "title": "Day 3: Modern Tokyo & Culture",
+      "location": "tokyo",
+      "routes": [
+        { "from": "Hotel", "to": "Akihabara", "transport": "Metro", "duration": "15 min" },
+        { "from": "Akihabara", "to": "Odaiba", "transport": "Train", "duration": "30 min" },
+        { "from": "Odaiba", "to": "Skytree", "transport": "Train", "duration": "25 min" }
+      ],
+      "highlights": [
+        "Akihabara electronics district",
+        "teamLab Borderless",
+        "Tokyo Skytree observatory",
+        "Traditional tea ceremony",
+        "Ginza evening stroll"
+      ],
+      "transportation": ["🚇 Metro", "🚃 Yurikamome Line", "🚶 Walking"]
+    },
+    "4": {
+      "title": "Day 4: Tokyo Free Choice",
+      "location": "tokyo",
+      "routes": [
+        { "from": "Hotel", "to": "Meiji Shrine", "transport": "Metro", "duration": "10 min" },
+        { "from": "Meiji", "to": "Omotesando", "transport": "Walking", "duration": "5 min" }
+      ],
+      "highlights": [
+        "Meiji Shrine visit",
+        "Omotesando luxury shopping",
+        "Final Tokyo lunch",
+        "Packing and preparation",
+        "Early rest before Mount Fuji"
+      ],
+      "transportation": ["🚇 Metro", "🚶 Walking"]
+    },
+    "5": {
+      "title": "Day 5: Tokyo to Mount Fuji",
+      "location": "fuji",
+      "accommodation": {
+        "from": "Shibuya Hotel",
+        "to": "Kawaguchiko Ryokan",
+        "to_coordinates": [35.5074, 138.7636],
+        "toFirstActivity": { "method": "🛏️ Hotel", "time": "0 min", "to": "checkout" },
+        "fromLastActivity": { "method": "🚌 Local Bus", "time": "15 min", "from": "Chureito Pagoda" }
+      },
+      "routes": [
+        { "from": "Shibuya Hotel", "to": "Shinjuku Station", "transport": "Metro", "duration": "10 min" },
+        { "from": "Shinjuku", "to": "Kawaguchiko", "transport": "Limited Express", "duration": "2 hours" }
+      ],
+      "activities": [
+        {
+          "time": "08:00",
+          "name": "Check out from Tokyo hotel",
+          "coordinates": [35.6598, 139.7006],
+          "duration": "30 min",
+          "transport": { "method": "🛏️ Hotel", "time": "0 min", "from": "room" }
+        },
+        {
+          "time": "10:00",
+          "name": "Limited Express Fuji Excursion",
+          "coordinates": [35.6896, 139.7006],
+          "duration": "120 min",
+          "transport": { "method": "🚇 Metro", "time": "10 min", "from": "hotel to Shinjuku" }
+        },
+        {
+          "time": "12:30",
+          "name": "Lake Kawaguchi arrival & ryokan check-in",
+          "coordinates": [35.5074, 138.7636],
+          "duration": "60 min",
+          "transport": { "method": "🚃 Limited Express", "time": "120 min", "from": "Shinjuku" }
+        },
+        {
+          "time": "14:30",
+          "name": "Chureito Pagoda climb",
+          "coordinates": [35.5017, 138.7872],
+          "duration": "120 min",
+          "transport": { "method": "🚌 Local Bus", "time": "15 min", "from": "ryokan" }
+        },
+        {
+          "time": "18:30",
+          "name": "Kaiseki dinner with Fuji views",
+          "coordinates": [35.5074, 138.7636],
+          "duration": "120 min",
+          "transport": { "method": "🚌 Local Bus", "time": "15 min", "from": "Chureito Pagoda" }
+        }
+      ],
+      "transportation": ["🚃 Limited Express", "🚌 Local Bus", "🚶 Walking"]
+    },
+    "6": {
+      "title": "Day 6: Five Lakes Exploration",
+      "location": "fuji",
+      "routes": [
+        { "from": "Kawaguchiko", "to": "Lake Sai", "transport": "Bus", "duration": "20 min" },
+        { "from": "Lake Sai", "to": "Lake Yamanaka", "transport": "Bus", "duration": "30 min" },
+        { "from": "Yamanaka", "to": "Lake Motosu", "transport": "Bus", "duration": "25 min" }
+      ],
+      "highlights": [
+        "Sunrise at Lake Kawaguchi",
+        "Ice cave exploration",
+        "Lake Yamanaka scenic views",
+        "Lake Motosu (1000 yen bill view)",
+        "Traditional cultural activities"
+      ],
+      "transportation": ["🚌 Local Bus", "🚶 Walking"]
+    },
+    "7": {
+      "title": "Day 7: Fuji to Hakone",
+      "location": "hakone",
+      "routes": [
+        { "from": "Kawaguchiko", "to": "Hakone", "transport": "Bus", "duration": "1.5 hours" }
+      ],
+      "highlights": [
+        "Hakone Open-Air Museum",
+        "Luxury ryokan check-in",
+        "Owakudani Valley exploration",
+        "Black eggs experience",
+        "Premium kaiseki dinner"
+      ],
+      "transportation": ["🚌 Highway Bus", "🚠 Ropeway"]
+    },
+    "8": {
+      "title": "Day 8: Hakone Loop Experience",
+      "location": "hakone",
+      "routes": [
+        { "from": "Ryokan", "to": "Ropeway Station", "transport": "Walking", "duration": "10 min" },
+        { "from": "Ropeway", "to": "Lake Ashi", "transport": "Ropeway", "duration": "20 min" },
+        { "from": "Lake Ashi", "to": "Hakone Shrine", "transport": "Boat", "duration": "15 min" }
+      ],
+      "highlights": [
+        "Hakone Ropeway aerial views",
+        "Lake Ashi pirate ship cruise",
+        "Hakone Shrine torii gate",
+        "Hakone Checkpoint visit",
+        "Tozan Train mountain railway"
+      ],
+      "transportation": ["🚠 Ropeway", "⛵ Pirate Ship", "🚃 Mountain Train"]
+    },
+    "9": {
+      "title": "Day 9: Hakone to Kyoto",
+      "location": "kyoto",
+      "routes": [
+        { "from": "Odawara", "to": "Kyoto", "transport": "Shinkansen", "duration": "2.5 hours" }
+      ],
+      "highlights": [
+        "Shinkansen bullet train",
+        "Kyoto arrival and check-in",
+        "Kiyomizu-dera Temple",
+        "Higashiyama District walk",
+        "Gion evening exploration"
+      ],
+      "transportation": ["🚄 Shinkansen", "🚌 Local Bus", "🚶 Walking"]
+    },
+    "10": {
+      "title": "Day 10: Golden Temples & Philosophy",
+      "location": "kyoto",
+      "routes": [
+        { "from": "Gion", "to": "Fushimi Inari", "transport": "Train", "duration": "30 min" },
+        { "from": "Fushimi", "to": "Kinkaku-ji", "transport": "Train+Bus", "duration": "45 min" },
+        { "from": "Kinkaku-ji", "to": "Arashiyama", "transport": "Bus", "duration": "30 min" }
+      ],
+      "highlights": [
+        "Fushimi Inari sunrise visit",
+        "Golden Pavilion photography",
+        "Ryoan-ji zen garden",
+        "Arashiyama Bamboo Grove",
+        "Philosopher's Path walk"
+      ],
+      "transportation": ["🚃 Keihan Line", "🚌 City Bus", "🚶 Walking"]
+    },
+    "11": {
+      "title": "Day 11: Kyoto Artisan Culture",
+      "location": "kyoto",
+      "routes": [
+        { "from": "Ryokan", "to": "Nishiki Market", "transport": "Walking", "duration": "10 min" },
+        { "from": "Nishiki", "to": "Ginkaku-ji", "transport": "Bus", "duration": "25 min" }
+      ],
+      "highlights": [
+        "Nishiki Market food walk",
+        "Kimono rental experience",
+        "Silver Pavilion visit",
+        "Traditional craft workshop",
+        "Farewell kaiseki dinner"
+      ],
+      "transportation": ["🚶 Walking", "🚌 City Bus"]
+    },
+    "12": {
+      "title": "Day 12: Nara Day Trip",
+      "location": "nara",
+      "routes": [
+        { "from": "Kyoto", "to": "Nara", "transport": "Limited Express", "duration": "35 min" },
+        { "from": "Nara Station", "to": "Nara Park", "transport": "Walking", "duration": "15 min" }
+      ],
+      "highlights": [
+        "Sacred deer interactions",
+        "Todaiji Temple Great Buddha",
+        "Kofukuji five-story pagoda",
+        "Kasuga Taisha shrine",
+        "Naramachi historic district"
+      ],
+      "transportation": ["🚃 Kintetsu Limited Express", "🚶 Walking"]
+    },
+    "13": {
+      "title": "Day 13: Kyoto to Osaka",
+      "location": "osaka",
+      "routes": [
+        { "from": "Kyoto", "to": "Osaka", "transport": "Train", "duration": "30 min" }
+      ],
+      "highlights": [
+        "Kuromon Market exploration",
+        "Dotonbori district",
+        "Takoyaki cooking lesson",
+        "Osaka Castle visit",
+        "Michelin star dinner"
+      ],
+      "transportation": ["🚃 Express Train", "🚇 Metro", "🚶 Walking"]
+    },
+    "14": {
+      "title": "Day 14: Modern Osaka",
+      "location": "osaka",
+      "routes": [
+        { "from": "Namba", "to": "Sumiyoshi", "transport": "Train", "duration": "20 min" },
+        { "from": "Sumiyoshi", "to": "Tempozan", "transport": "Train", "duration": "25 min" },
+        { "from": "Tempozan", "to": "Umeda", "transport": "Metro", "duration": "20 min" }
+      ],
+      "highlights": [
+        "Sumiyoshi Taisha shrine",
+        "Osaka Aquarium Kaiyukan",
+        "Umeda Sky Building",
+        "Department store basement",
+        "French-Japanese fusion dinner"
+      ],
+      "transportation": ["🚃 Nankai Line", "🚇 Metro", "🚶 Walking"]
+    },
+    "15": {
+      "title": "Day 15: Osaka to Hiroshima",
+      "location": "hiroshima",
+      "routes": [
+        { "from": "Shin-Osaka", "to": "Hiroshima", "transport": "Shinkansen", "duration": "1 hour 20 min" }
+      ],
+      "highlights": [
+        "Peace Memorial Park",
+        "Atomic Bomb Museum",
+        "Hiroshima-style okonomiyaki",
+        "Hiroshima Castle",
+        "Shukkei-en Garden"
+      ],
+      "transportation": ["🚄 Shinkansen", "🚇 Streetcar", "🚶 Walking"]
+    },
+    "16": {
+      "title": "Day 16: Miyajima Sacred Island",
+      "location": "hiroshima",
+      "routes": [
+        { "from": "Hiroshima", "to": "Miyajimaguchi", "transport": "Train", "duration": "30 min" },
+        { "from": "Miyajimaguchi", "to": "Miyajima", "transport": "Ferry", "duration": "10 min" }
+      ],
+      "highlights": [
+        "Itsukushima Shrine",
+        "Famous floating torii gate",
+        "Mount Misen hiking",
+        "Traditional craft workshop",
+        "Sunset photography session"
+      ],
+      "transportation": ["🚃 JR Train", "⛴️ Ferry", "🚠 Ropeway"]
+    },
+    "17": {
+      "title": "Day 17: Hiroshima to Kanazawa",
+      "location": "kanazawa",
+      "routes": [
+        { "from": "Hiroshima", "to": "Kanazawa", "transport": "Shinkansen+Transfer", "duration": "3 hours" }
+      ],
+      "highlights": [
+        "Omicho Market fresh seafood",
+        "Kenrokuen Garden",
+        "Kanazawa Castle",
+        "Higashi Chaya District",
+        "Gold leaf workshop"
+      ],
+      "transportation": ["🚄 Shinkansen", "🚃 Limited Express", "🚶 Walking"]
+    },
+    "18": {
+      "title": "Day 18: Kanazawa to Tokyo Departure",
+      "location": "tokyo",
+      "routes": [
+        { "from": "Kanazawa", "to": "Tokyo", "transport": "Hokuriku Shinkansen", "duration": "2.5 hours" }
+      ],
+      "highlights": [
+        "Nagamachi Samurai District",
+        "21st Century Museum",
+        "Tokyo final experiences",
+        "Airport departure",
+        "Journey complete!"
+      ],
+      "transportation": ["🚄 Hokuriku Shinkansen", "🚇 Airport Express"]
+    }
+  }
+}

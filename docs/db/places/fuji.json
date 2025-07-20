@@ -1,0 +1,139 @@
+{
+  "id": "fuji",
+  "name": "Mount Fuji & Five Lakes",
+  "icon": "🗻",
+  "description": "Sacred mountain and pristine lakes",
+  "coordinates": [35.3606, 138.7274],
+  "thingsToDo": [
+    {
+      "name": "Lake Kawaguchiko",
+      "description": "Most accessible of the Fuji Five Lakes with stunning Mt. Fuji reflections.",
+      "cost": "Free",
+      "duration": "Half/Full day",
+      "coordinates": [35.5074, 138.7636],
+      "bestPhotoSpots": [
+        {
+          "name": "Northern shore for Mt. Fuji reflection",
+          "link": "https://www.japan-guide.com/e/e6906.html"
+        },
+        {
+          "name": "Kawaguchiko Music Forest",
+          "link": "https://www.kawaguchikomusicforest.jp/"
+        },
+        {
+          "name": "Kachi Kachi Ropeway",
+          "link": "https://www.kachikachiyama-ropeway.com/en/"
+        },
+        {
+          "name": "Oishi Park",
+          "link": "https://www.japan-guide.com/e/e6906.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Lake Information",
+          "link": "https://www.fujisan.ne.jp/en/"
+        }
+      ]
+    },
+    {
+      "name": "Chureito Pagoda",
+      "description": "Iconic view of Mt. Fuji with traditional five-story pagoda in foreground.",
+      "cost": "¥400",
+      "duration": "1-2 hours",
+      "coordinates": [35.5017, 138.7872],
+      "bestPhotoSpots": [
+        {
+          "name": "Main observation deck",
+          "link": "https://www.japan-guide.com/e/e6917.html"
+        },
+        {
+          "name": "Pagoda stairs",
+          "link": "https://www.japan-guide.com/e/e6917.html"
+        },
+        {
+          "name": "Cherry blossom spots (spring)",
+          "link": "https://www.japan-guide.com/e/e6917.html"
+        },
+        {
+          "name": "Lower temple grounds",
+          "link": "https://www.japan-guide.com/e/e6917.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Access Guide",
+          "link": "https://www.japan-guide.com/e/e6917.html"
+        }
+      ]
+    },
+    {
+      "name": "Lake Yamanaka",
+      "description": "Largest of the Fuji Five Lakes with various water activities.",
+      "cost": "Free",
+      "duration": "Half day",
+      "coordinates": [35.4171, 138.8634],
+      "bestPhotoSpots": [],
+      "resources": [
+        {
+          "name": "Lake Yamanaka Tourism",
+          "link": "https://www.yamanakako-kankou.jp/foreign/en/"
+        }
+      ]
+    },
+    {
+      "name": "Fuji-Q Highland",
+      "description": "Famous amusement park with record-breaking roller coasters and Mt. Fuji views.",
+      "cost": "¥6,200",
+      "duration": "Full day",
+      "coordinates": [35.4869, 138.7805],
+      "bestPhotoSpots": [],
+      "resources": [
+        {
+          "name": "Park Website",
+          "link": "https://www.fujiq.jp/en/"
+        },
+        {
+          "name": "Thomas Land",
+          "link": "https://www.fujiq.jp/en/thomas/"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Fujikyuko Line",
+      "description": "From Otsuki Station",
+      "link": "https://www.fujikyu-railway.jp/english/"
+    },
+    {
+      "name": "Fuji Five Lakes Pass",
+      "description": "Area transportation pass",
+      "link": "https://www.japan-guide.com/e/e6905.html"
+    },
+    {
+      "name": "Rental car info",
+      "description": "For flexible transportation",
+      "link": "https://www.japan-guide.com/e/e2022.html"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Spring",
+      "months": "April-May",
+      "description": "Cherry blossoms and clear Mt. Fuji views",
+      "link": "https://www.japan-guide.com/e/e6900.html"
+    },
+    {
+      "season": "Fall",
+      "months": "October-November",
+      "description": "Autumn colors and crisp air for mountain views",
+      "link": "https://www.japan-guide.com/e/e6900.html"
+    }
+  ],
+  "safetyTips": [
+    "Check weather conditions for Mt. Fuji visibility",
+    "Bring warm clothing even in summer - mountain weather changes quickly",
+    "Plan transportation carefully - some areas have limited public transport"
+  ]
+}

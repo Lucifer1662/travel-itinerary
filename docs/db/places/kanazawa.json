@@ -1,0 +1,89 @@
+{
+  "id": "kanazawa",
+  "name": "Kanazawa",
+  "icon": "🏯",
+  "description": "Traditional crafts and perfect gardens",
+  "coordinates": [36.5944, 136.6256],
+  "thingsToDo": [
+    {
+      "name": "Kenrokuen Garden",
+      "description": "One of Japan's three most beautiful gardens, perfect in all four seasons.",
+      "cost": "¥320",
+      "duration": "1-2 hours",
+      "coordinates": [36.5628, 136.6622],
+      "bestPhotoSpots": [
+        {
+          "name": "Kotoji Lantern",
+          "link": "https://www.japan-guide.com/e/e4100.html"
+        },
+        {
+          "name": "Seasonal landscapes",
+          "link": "https://www.japan-guide.com/e/e4100.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Garden Information",
+          "link": "https://www.japan-guide.com/e/e4100.html"
+        }
+      ]
+    },
+    {
+      "name": "Higashi Chaya District",
+      "description": "Historic geisha district with traditional tea houses and gold leaf workshops.",
+      "cost": "Free to explore",
+      "duration": "1-2 hours",
+      "coordinates": [36.5707, 136.6734],
+      "bestPhotoSpots": [
+        {
+          "name": "Traditional tea houses",
+          "link": "https://www.japan-guide.com/e/e4101.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "District Guide",
+          "link": "https://www.japan-guide.com/e/e4101.html"
+        }
+      ]
+    },
+    {
+      "name": "Omicho Market",
+      "description": "Fresh seafood market known as 'Kanazawa's kitchen' with excellent sushi.",
+      "cost": "Free to browse",
+      "duration": "1-2 hours",
+      "coordinates": [36.5742, 136.6594],
+      "bestPhotoSpots": [
+        {
+          "name": "Fresh seafood displays",
+          "link": "https://www.japan-guide.com/e/e4102.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Market Guide",
+          "link": "https://www.japan-guide.com/e/e4102.html"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Kanazawa Loop Bus",
+      "description": "Tourist bus connecting major sights",
+      "link": "https://www.japan-guide.com/e/e4100.html"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Any season",
+      "months": "Year-round",
+      "description": "Beautiful in all seasons",
+      "link": "https://www.japan-guide.com/e/e4100.html"
+    }
+  ],
+  "safetyTips": [
+    "Try the local specialties but pace yourself",
+    "Gold leaf products are delicate"
+  ]
+}

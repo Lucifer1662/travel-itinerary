@@ -1,0 +1,60 @@
+{
+  "destinations": [
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "icon": "🏙️",
+      "description": "Modern metropolis meets traditional culture",
+      "link": "/places/tokyo"
+    },
+    {
+      "id": "fuji",
+      "name": "Mount Fuji",
+      "icon": "🗻",
+      "description": "Sacred mountain and pristine lakes",
+      "link": "/places/mount-fuji"
+    },
+    {
+      "id": "hakone",
+      "name": "Hakone",
+      "icon": "🌋",
+      "description": "Hot springs and volcanic wonders",
+      "link": "/places/hakone"
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto",
+      "icon": "🏛️",
+      "description": "Ancient capital and geisha districts",
+      "link": "/places/kyoto"
+    },
+    {
+      "id": "nara",
+      "name": "Nara",
+      "icon": "🦌",
+      "description": "Sacred deer and giant Buddha",
+      "link": "/places/nara"
+    },
+    {
+      "id": "osaka",
+      "name": "Osaka",
+      "icon": "🍜",
+      "description": "Japan's kitchen and street food paradise",
+      "link": "/places/osaka"
+    },
+    {
+      "id": "hiroshima",
+      "name": "Hiroshima",
+      "icon": "🕊️",
+      "description": "Peace memorial and floating torii",
+      "link": "/places/hiroshima"
+    },
+    {
+      "id": "kanazawa",
+      "name": "Kanazawa",
+      "icon": "🏯",
+      "description": "Traditional crafts and perfect gardens",
+      "link": "/places/kanazawa"
+    }
+  ]
+}

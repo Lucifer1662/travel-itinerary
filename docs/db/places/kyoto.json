@@ -1,0 +1,126 @@
+{
+  "id": "kyoto",
+  "name": "Kyoto",
+  "icon": "🏛️",
+  "description": "Ancient capital and geisha districts",
+  "coordinates": [35.0116, 135.7681],
+  "thingsToDo": [
+    {
+      "name": "Fushimi Inari Shrine",
+      "description": "Famous for thousands of vermillion torii gates winding up the mountain.",
+      "cost": "Free",
+      "duration": "2-3 hours",
+      "coordinates": [34.9672, 135.7727],
+      "bestPhotoSpots": [
+        {
+          "name": "First torii gate",
+          "link": "http://inari.jp/en/"
+        },
+        {
+          "name": "Senbon torii path",
+          "link": "http://inari.jp/en/"
+        },
+        {
+          "name": "Yotsutsuji intersection viewpoint",
+          "link": "https://www.japan-guide.com/e/e3915.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Official Website",
+          "link": "http://inari.jp/en/"
+        }
+      ]
+    },
+    {
+      "name": "Kinkaku-ji (Golden Pavilion)",
+      "description": "Stunning gold-leaf covered temple reflecting in a peaceful pond.",
+      "cost": "¥400",
+      "duration": "1 hour",
+      "coordinates": [35.0394, 135.7292],
+      "bestPhotoSpots": [
+        {
+          "name": "Main viewing deck",
+          "link": "https://www.shokoku-ji.jp/en/kinkakuji/"
+        },
+        {
+          "name": "Bridge reflections",
+          "link": "https://www.shokoku-ji.jp/en/kinkakuji/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Visitor Information",
+          "link": "https://www.shokoku-ji.jp/en/kinkakuji/"
+        }
+      ]
+    },
+    {
+      "name": "Arashiyama Bamboo Grove",
+      "description": "Enchanting bamboo forest path creating natural green tunnels.",
+      "cost": "Free",
+      "duration": "1-2 hours",
+      "coordinates": [35.0170, 135.6684],
+      "bestPhotoSpots": [
+        {
+          "name": "Main bamboo path",
+          "link": "https://www.japan-guide.com/e/e3912.html"
+        },
+        {
+          "name": "Path intersections",
+          "link": "https://www.japan-guide.com/e/e3912.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Area Guide",
+          "link": "https://www.japan-guide.com/e/e3912.html"
+        }
+      ]
+    },
+    {
+      "name": "Gion District",
+      "description": "Famous geisha district with traditional wooden machiya houses and tea shops.",
+      "cost": "Free to explore",
+      "duration": "1-2 hours",
+      "coordinates": [35.0033, 135.7753],
+      "bestPhotoSpots": [
+        {
+          "name": "Hanamikoji Street",
+          "link": "https://www.japan-guide.com/e/e3902.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Gion Guide",
+          "link": "https://www.japan-guide.com/e/e3902.html"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Kyoto City Bus Pass",
+      "description": "Unlimited daily bus rides",
+      "link": "https://www.city.kyoto.lg.jp/kotsu/page/0000028378.html"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Spring",
+      "months": "March-May",
+      "description": "Cherry blossoms",
+      "link": "https://www.japan-guide.com/e/e3950.html"
+    },
+    {
+      "season": "Fall",
+      "months": "November",
+      "description": "Autumn colors",
+      "link": "https://www.japan-guide.com/e/e3950.html"
+    }
+  ],
+  "safetyTips": [
+    "Respect photography rules in temple areas",
+    "Don't touch or photograph geishas"
+  ]
+}
