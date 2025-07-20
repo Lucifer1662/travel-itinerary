@@ -716,7 +716,7 @@
 	{#if destinationsData}
 		<div class="destination-links">
 			{#each destinationsData.destinations as destination}
-				<a href="/places/{destination.id}" class="destination-card">
+				<a href="{base}/places/{destination.id}" class="destination-card">
 					<div class="destination-icon">{destination.icon}</div>
 					<div class="destination-name">{destination.name}</div>
 					<div class="destination-desc">{destination.description}</div>

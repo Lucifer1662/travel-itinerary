@@ -116,12 +116,12 @@
 	{:else if error}
 		<div class="error">
 			<h2>Error: {error}</h2>
-			<a href="/" class="back-link">← Return to main page</a>
+			<a href="{base}/" class="back-link">← Return to main page</a>
 		</div>
 	{:else if placeData}
 		<header class="place-header">
 			<div class="header-content">
-				<a href="/" class="back-link">← Back to Journey</a>
+				<a href="{base}/" class="back-link">← Back to Journey</a>
 				<div class="place-title">
 					<h1><span class="place-icon">{placeData.icon}</span> {placeData.name}</h1>
 					<p class="place-description">{placeData.description}</p>

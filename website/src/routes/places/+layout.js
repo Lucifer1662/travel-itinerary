@@ -1,2 +1,2 @@
-// Disable prerendering for dynamic place routes since they load data dynamically
-export const prerender = false;
+// Enable prerendering for place routes
+export const prerender = true;
