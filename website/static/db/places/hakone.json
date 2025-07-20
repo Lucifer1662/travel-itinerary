@@ -1,0 +1,164 @@
+{
+  "id": "hakone",
+  "name": "Hakone",
+  "icon": "🌋",
+  "description": "Hot springs and volcanic wonders",
+  "coordinates": [35.2323, 139.1068],
+  "thingsToDo": [
+    {
+      "name": "Hakone Open Air Museum",
+      "description": "Impressive outdoor museum harmoniously blending nature and art, featuring sculptures by Picasso and Henry Moore.",
+      "cost": "¥1,600",
+      "duration": "2-3 hours",
+      "coordinates": [35.2449, 139.0446],
+      "bestPhotoSpots": [
+        {
+          "name": "Sculpture Garden",
+          "link": "https://www.hakone-oam.or.jp/en/"
+        },
+        {
+          "name": "Picasso Pavilion",
+          "link": "https://www.hakone-oam.or.jp/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Museum Website",
+          "link": "https://www.hakone-oam.or.jp/en/"
+        }
+      ]
+    },
+    {
+      "name": "Hakone Ropeway",
+      "description": "Scenic cable car offering panoramic views of Owakudani volcanic valley and Mount Fuji on clear days.",
+      "cost": "~¥1,500 one way",
+      "duration": "30 mins",
+      "coordinates": [35.2341, 139.0226],
+      "bestPhotoSpots": [
+        {
+          "name": "Aerial valley views",
+          "link": "https://www.hakoneropeway.co.jp/foreign/en/"
+        },
+        {
+          "name": "Mt. Fuji observation",
+          "link": "https://www.hakoneropeway.co.jp/foreign/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Ropeway Information",
+          "link": "https://www.hakoneropeway.co.jp/foreign/en/"
+        }
+      ]
+    },
+    {
+      "name": "Owakudani (Great Boiling Valley)",
+      "description": "Active volcanic valley with sulfurous fumes and hot springs. Try the famous black eggs boiled in hot springs.",
+      "cost": "Free to visit",
+      "duration": "1 hour",
+      "coordinates": [35.2395, 139.0194],
+      "bestPhotoSpots": [
+        {
+          "name": "Volcanic vents",
+          "link": "https://www.japan-guide.com/e/e5208.html"
+        },
+        {
+          "name": "Steam fields",
+          "link": "https://www.japan-guide.com/e/e5208.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Owakudani Guide",
+          "link": "https://www.japan-guide.com/e/e5208.html"
+        }
+      ]
+    },
+    {
+      "name": "Lake Ashinoko (Ashi)",
+      "description": "Stunning caldera lake with pirate ship cruises and Mount Fuji views on clear days.",
+      "cost": "Cruise ~¥1,200",
+      "duration": "1-2 hours",
+      "coordinates": [35.2065, 139.0076],
+      "bestPhotoSpots": [
+        {
+          "name": "Mt. Fuji reflection",
+          "link": "https://www.japan-guide.com/e/e5205.html"
+        },
+        {
+          "name": "Pirate ship views",
+          "link": "https://www.hakone-kankosen.co.jp/en/"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Lake Ashi Information",
+          "link": "https://www.japan-guide.com/e/e5205.html"
+        },
+        {
+          "name": "Pirate Ship Cruises",
+          "link": "https://www.hakone-kankosen.co.jp/en/"
+        }
+      ]
+    },
+    {
+      "name": "Hakone Shrine",
+      "description": "Historic shrine on Lake Ashi shores with famous red torii gate appearing to float on water.",
+      "cost": "Free",
+      "duration": "45 mins - 1 hour",
+      "coordinates": [35.2066, 139.0157],
+      "bestPhotoSpots": [
+        {
+          "name": "Floating torii gate",
+          "link": "https://www.japan-guide.com/e/e5201.html"
+        },
+        {
+          "name": "Shrine grounds",
+          "link": "https://www.japan-guide.com/e/e5201.html"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Shrine Information",
+          "link": "https://www.japan-guide.com/e/e5201.html"
+        }
+      ]
+    }
+  ],
+  "transportation": [
+    {
+      "name": "Hakone Free Pass",
+      "description": "Covers most trains, cable cars, ropeways, boats, and buses",
+      "link": "https://www.odakyu.jp/english/passes/hakone/"
+    },
+    {
+      "name": "Odakyu Romancecar",
+      "description": "Limited express from Shinjuku (90 minutes)",
+      "link": "https://www.odakyu.jp/english/romancecar/"
+    },
+    {
+      "name": "Hakone Round Course",
+      "description": "Popular sightseeing route",
+      "link": "https://www.japan-guide.com/e/e5200.html"
+    }
+  ],
+  "bestTimeToVisit": [
+    {
+      "season": "Autumn",
+      "months": "October-November",
+      "description": "Stunning autumn colors",
+      "link": "https://www.japan-guide.com/e/e5200.html"
+    },
+    {
+      "season": "Spring",
+      "months": "April-May",
+      "description": "Pleasant weather and cherry blossoms",
+      "link": "https://www.japan-guide.com/e/e5200.html"
+    }
+  ],
+  "safetyTips": [
+    "Be cautious around volcanic areas - stay on designated paths",
+    "Check weather for Mount Fuji visibility",
+    "Onsen etiquette is important - research before visiting hot springs"
+  ]
+}

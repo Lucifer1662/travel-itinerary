@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Japan Adventure: 18-Day Journey</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .trip-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .map-section, .itinerary-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        #map {
+            height: 500px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+        
+        .day-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .day-btn {
+            background: #ecf0f1;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .day-btn:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .day-btn.active {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .day-details {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        
+        .day-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .route-info {
+            background: #e8f4fd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3498db;
+        }
+        
+        .highlights {
+            list-style: none;
+        }
+        
+        .highlights li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .highlights li:before {
+            content: "📍 ";
+            margin-right: 0.5rem;
+        }
+        
+        .transportation {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+        }
+        
+        .destination-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .destination-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-5px);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .destination-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .destination-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .destination-desc {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .trip-stats {
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        .legend {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇯🇵 Epic Japan Adventure</h1>
+            <p class="subtitle">18-Day Cultural & Culinary Journey Through Japan's Heartland</p>
+            <div class="trip-stats">
+                <div class="stat">
+                    <div class="stat-number">18</div>
+                    <div>Days</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div>Cities</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div>Michelin Stars</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div>Memories</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="map-section">
+                <h2 class="section-title">📍 Interactive Route Map</h2>
+                <div class="day-selector" id="daySelector">
+                    <!-- Day buttons will be generated by JavaScript -->
+                </div>
+                <div id="map"></div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #e74c3c;"></div>
+                        <span>Current Location</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #3498db;"></div>
+                        <span>Transportation Route</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #2ecc71;"></div>
+                        <span>Attractions</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itinerary-section">
+                <h2 class="section-title">🗓️ Daily Itinerary</h2>
+                <div id="dayDetails" class="day-details">
+                    <p>Select a day to see detailed itinerary and route information.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-links">
+            <a href="places/tokyo.md" class="destination-card">
+                <div class="destination-icon">🏙️</div>
+                <div class="destination-name">Tokyo</div>
+                <div class="destination-desc">Modern metropolis meets traditional culture</div>
+            </a>
+            <a href="places/mount-fuji.md" class="destination-card">
+                <div class="destination-icon">🗻</div>
+                <div class="destination-name">Mount Fuji</div>
+                <div class="destination-desc">Sacred mountain and pristine lakes</div>
+            </a>
+            <a href="places/hakone.md" class="destination-card">
+                <div class="destination-icon">🌋</div>
+                <div class="destination-name">Hakone</div>
+                <div class="destination-desc">Hot springs and volcanic wonders</div>
+            </a>
+            <a href="places/kyoto.md" class="destination-card">
+                <div class="destination-icon">🏛️</div>
+                <div class="destination-name">Kyoto</div>
+                <div class="destination-desc">Ancient capital and geisha districts</div>
+            </a>
+            <a href="places/nara.md" class="destination-card">
+                <div class="destination-icon">🦌</div>
+                <div class="destination-name">Nara</div>
+                <div class="destination-desc">Sacred deer and giant Buddha</div>
+            </a>
+            <a href="places/osaka.md" class="destination-card">
+                <div class="destination-icon">🍜</div>
+                <div class="destination-name">Osaka</div>
+                <div class="destination-desc">Japan's kitchen and street food paradise</div>
+            </a>
+            <a href="places/hiroshima.md" class="destination-card">
+                <div class="destination-icon">🕊️</div>
+                <div class="destination-name">Hiroshima</div>
+                <div class="destination-desc">Peace memorial and floating torii</div>
+            </a>
+            <a href="places/kanazawa.md" class="destination-card">
+                <div class="destination-icon">🏯</div>
+                <div class="destination-name">Kanazawa</div>
+                <div class="destination-desc">Traditional crafts and perfect gardens</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([36.2048, 138.2529], 6);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Define destinations with coordinates
+        const destinations = {
+            tokyo: [35.6762, 139.6503],
+            fuji: [35.3606, 138.7274],
+            hakone: [35.2323, 139.1068],
+            kyoto: [35.0116, 135.7681],
+            nara: [34.6851, 135.8048],
+            osaka: [34.6937, 135.5023],
+            hiroshima: [34.3853, 132.4553],
+            kanazawa: [36.5944, 136.6256]
+        };
+
+        // Define daily itinerary data
+        const itineraryData = {
+            1: {
+                title: "Day 1: Tokyo Arrival & First Impressions",
+                location: "tokyo",
+                routes: [
+                    { from: "Narita Airport", to: "Shibuya", transport: "Limousine Bus", duration: "60 min" }
+                ],
+                highlights: [
+                    "Shibuya Crossing experience",
+                    "Starbucks QFRONT observation",
+                    "High-end sushi lunch",
+                    "Harajuku exploration",
+                    "Michelin star dinner"
+                ],
+                transportation: ["🚌 Limousine Bus", "🚶 Walking", "🚇 Metro"]
+            },
+            2: {
+                title: "Day 2: Traditional Tokyo",
+                location: "tokyo",
+                routes: [
+                    { from: "Hotel", to: "Tsukiji", transport: "Metro", duration: "20 min" },
+                    { from: "Tsukiji", to: "Asakusa", transport: "Metro", duration: "15 min" },
+                    { from: "Asakusa", to: "Ueno", transport: "Walking", duration: "20 min" }
+                ],
+                highlights: [
+                    "Tsukiji Outer Market breakfast",
+                    "Senso-ji Temple visit",
+                    "Ueno Park and museums",
+                    "Imperial Palace gardens",
+                    "Traditional tempura dinner"
+                ],
+                transportation: ["🚇 Metro", "🚶 Walking"]
+            },
+            3: {
+                title: "Day 3: Modern Tokyo & Culture",
+                location: "tokyo",
+                routes: [
+                    { from: "Hotel", to: "Akihabara", transport: "Metro", duration: "15 min" },
+                    { from: "Akihabara", to: "Odaiba", transport: "Train", duration: "30 min" },
+                    { from: "Odaiba", to: "Skytree", transport: "Train", duration: "25 min" }
+                ],
+                highlights: [
+                    "Akihabara electronics district",
+                    "teamLab Borderless",
+                    "Tokyo Skytree observatory",
+                    "Traditional tea ceremony",
+                    "Ginza evening stroll"
+                ],
+                transportation: ["🚇 Metro", "🚃 Yurikamome Line", "🚶 Walking"]
+            },
+            4: {
+                title: "Day 4: Tokyo Free Choice",
+                location: "tokyo",
+                routes: [
+                    { from: "Hotel", to: "Meiji Shrine", transport: "Metro", duration: "10 min" },
+                    { from: "Meiji", to: "Omotesando", transport: "Walking", duration: "5 min" }
+                ],
+                highlights: [
+                    "Meiji Shrine visit",
+                    "Omotesando luxury shopping",
+                    "Final Tokyo lunch",
+                    "Packing and preparation",
+                    "Early rest before Mount Fuji"
+                ],
+                transportation: ["🚇 Metro", "🚶 Walking"]
+            },
+            5: {
+                title: "Day 5: Tokyo to Mount Fuji",
+                location: "fuji",
+                routes: [
+                    { from: "Shinjuku", to: "Kawaguchiko", transport: "Limited Express", duration: "2 hours" }
+                ],
+                highlights: [
+                    "Limited Express Fuji Excursion",
+                    "Lake Kawaguchi arrival",
+                    "Traditional ryokan check-in",
+                    "Chureito Pagoda climb",
+                    "Kaiseki dinner with Fuji views"
+                ],
+                transportation: ["🚃 Limited Express", "🚌 Local Bus", "🚶 Walking"]
+            },
+            6: {
+                title: "Day 6: Five Lakes Exploration",
+                location: "fuji",
+                routes: [
+                    { from: "Kawaguchiko", to: "Lake Sai", transport: "Bus", duration: "20 min" },
+                    { from: "Lake Sai", to: "Lake Yamanaka", transport: "Bus", duration: "30 min" },
+                    { from: "Yamanaka", to: "Lake Motosu", transport: "Bus", duration: "25 min" }
+                ],
+                highlights: [
+                    "Sunrise at Lake Kawaguchi",
+                    "Ice cave exploration",
+                    "Lake Yamanaka scenic views",
+                    "Lake Motosu (1000 yen bill view)",
+                    "Traditional cultural activities"
+                ],
+                transportation: ["🚌 Local Bus", "🚶 Walking"]
+            },
+            7: {
+                title: "Day 7: Fuji to Hakone",
+                location: "hakone",
+                routes: [
+                    { from: "Kawaguchiko", to: "Hakone", transport: "Bus", duration: "1.5 hours" }
+                ],
+                highlights: [
+                    "Hakone Open-Air Museum",
+                    "Luxury ryokan check-in",
+                    "Owakudani Valley exploration",
+                    "Black eggs experience",
+                    "Premium kaiseki dinner"
+                ],
+                transportation: ["🚌 Highway Bus", "🚠 Ropeway"]
+            },
+            8: {
+                title: "Day 8: Hakone Loop Experience",
+                location: "hakone",
+                routes: [
+                    { from: "Ryokan", to: "Ropeway Station", transport: "Walking", duration: "10 min" },
+                    { from: "Ropeway", to: "Lake Ashi", transport: "Ropeway", duration: "20 min" },
+                    { from: "Lake Ashi", to: "Hakone Shrine", transport: "Boat", duration: "15 min" }
+                ],
+                highlights: [
+                    "Hakone Ropeway aerial views",
+                    "Lake Ashi pirate ship cruise",
+                    "Hakone Shrine torii gate",
+                    "Hakone Checkpoint visit",
+                    "Tozan Train mountain railway"
+                ],
+                transportation: ["🚠 Ropeway", "⛵ Pirate Ship", "🚃 Mountain Train"]
+            },
+            9: {
+                title: "Day 9: Hakone to Kyoto",
+                location: "kyoto",
+                routes: [
+                    { from: "Odawara", to: "Kyoto", transport: "Shinkansen", duration: "2.5 hours" }
+                ],
+                highlights: [
+                    "Shinkansen bullet train",
+                    "Kyoto arrival and check-in",
+                    "Kiyomizu-dera Temple",
+                    "Higashiyama District walk",
+                    "Gion evening exploration"
+                ],
+                transportation: ["🚄 Shinkansen", "🚌 Local Bus", "🚶 Walking"]
+            },
+            10: {
+                title: "Day 10: Golden Temples & Philosophy",
+                location: "kyoto",
+                routes: [
+                    { from: "Gion", to: "Fushimi Inari", transport: "Train", duration: "30 min" },
+                    { from: "Fushimi", to: "Kinkaku-ji", transport: "Train+Bus", duration: "45 min" },
+                    { from: "Kinkaku-ji", to: "Arashiyama", transport: "Bus", duration: "30 min" }
+                ],
+                highlights: [
+                    "Fushimi Inari sunrise visit",
+                    "Golden Pavilion photography",
+                    "Ryoan-ji zen garden",
+                    "Arashiyama Bamboo Grove",
+                    "Philosopher's Path walk"
+                ],
+                transportation: ["🚃 Keihan Line", "🚌 City Bus", "🚶 Walking"]
+            },
+            11: {
+                title: "Day 11: Kyoto Artisan Culture",
+                location: "kyoto",
+                routes: [
+                    { from: "Ryokan", to: "Nishiki Market", transport: "Walking", duration: "10 min" },
+                    { from: "Nishiki", to: "Ginkaku-ji", transport: "Bus", duration: "25 min" }
+                ],
+                highlights: [
+                    "Nishiki Market food walk",
+                    "Kimono rental experience",
+                    "Silver Pavilion visit",
+                    "Traditional craft workshop",
+                    "Farewell kaiseki dinner"
+                ],
+                transportation: ["🚶 Walking", "🚌 City Bus"]
+            },
+            12: {
+                title: "Day 12: Nara Day Trip",
+                location: "nara",
+                routes: [
+                    { from: "Kyoto", to: "Nara", transport: "Limited Express", duration: "35 min" },
+                    { from: "Nara Station", to: "Nara Park", transport: "Walking", duration: "15 min" }
+                ],
+                highlights: [
+                    "Sacred deer interactions",
+                    "Todaiji Temple Great Buddha",
+                    "Kofukuji five-story pagoda",
+                    "Kasuga Taisha shrine",
+                    "Naramachi historic district"
+                ],
+                transportation: ["🚃 Kintetsu Limited Express", "🚶 Walking"]
+            },
+            13: {
+                title: "Day 13: Kyoto to Osaka",
+                location: "osaka",
+                routes: [
+                    { from: "Kyoto", to: "Osaka", transport: "Train", duration: "30 min" }
+                ],
+                highlights: [
+                    "Kuromon Market exploration",
+                    "Dotonbori district",
+                    "Takoyaki cooking lesson",
+                    "Osaka Castle visit",
+                    "Michelin star dinner"
+                ],
+                transportation: ["🚃 Express Train", "🚇 Metro", "🚶 Walking"]
+            },
+            14: {
+                title: "Day 14: Modern Osaka",
+                location: "osaka",
+                routes: [
+                    { from: "Namba", to: "Sumiyoshi", transport: "Train", duration: "20 min" },
+                    { from: "Sumiyoshi", to: "Tempozan", transport: "Train", duration: "25 min" },
+                    { from: "Tempozan", to: "Umeda", transport: "Metro", duration: "20 min" }
+                ],
+                highlights: [
+                    "Sumiyoshi Taisha shrine",
+                    "Osaka Aquarium Kaiyukan",
+                    "Umeda Sky Building",
+                    "Department store basement",
+                    "French-Japanese fusion dinner"
+                ],
+                transportation: ["🚃 Nankai Line", "🚇 Metro", "🚶 Walking"]
+            },
+            15: {
+                title: "Day 15: Osaka to Hiroshima",
+                location: "hiroshima",
+                routes: [
+                    { from: "Shin-Osaka", to: "Hiroshima", transport: "Shinkansen", duration: "1 hour 20 min" }
+                ],
+                highlights: [
+                    "Peace Memorial Park",
+                    "Atomic Bomb Museum",
+                    "Hiroshima-style okonomiyaki",
+                    "Hiroshima Castle",
+                    "Shukkei-en Garden"
+                ],
+                transportation: ["🚄 Shinkansen", "🚇 Streetcar", "🚶 Walking"]
+            },
+            16: {
+                title: "Day 16: Miyajima Sacred Island",
+                location: "hiroshima",
+                routes: [
+                    { from: "Hiroshima", to: "Miyajimaguchi", transport: "Train", duration: "30 min" },
+                    { from: "Miyajimaguchi", to: "Miyajima", transport: "Ferry", duration: "10 min" }
+                ],
+                highlights: [
+                    "Itsukushima Shrine",
+                    "Famous floating torii gate",
+                    "Mount Misen hiking",
+                    "Traditional craft workshop",
+                    "Sunset photography session"
+                ],
+                transportation: ["🚃 JR Train", "⛴️ Ferry", "🚠 Ropeway"]
+            },
+            17: {
+                title: "Day 17: Hiroshima to Kanazawa",
+                location: "kanazawa",
+                routes: [
+                    { from: "Hiroshima", to: "Kanazawa", transport: "Shinkansen+Transfer", duration: "3 hours" }
+                ],
+                highlights: [
+                    "Omicho Market fresh seafood",
+                    "Kenrokuen Garden",
+                    "Kanazawa Castle",
+                    "Higashi Chaya District",
+                    "Gold leaf workshop"
+                ],
+                transportation: ["🚄 Shinkansen", "🚃 Limited Express", "🚶 Walking"]
+            },
+            18: {
+                title: "Day 18: Kanazawa to Tokyo Departure",
+                location: "tokyo",
+                routes: [
+                    { from: "Kanazawa", to: "Tokyo", transport: "Hokuriku Shinkansen", duration: "2.5 hours" }
+                ],
+                highlights: [
+                    "Nagamachi Samurai District",
+                    "21st Century Museum",
+                    "Tokyo final experiences",
+                    "Airport departure",
+                    "Journey complete!"
+                ],
+                transportation: ["🚄 Hokuriku Shinkansen", "🚇 Airport Express"]
+            }
+        };
+
+        let currentLayer = null;
+        let currentMarkers = [];
+
+        // Generate day selector buttons
+        const daySelector = document.getElementById('daySelector');
+        for (let day = 1; day <= 18; day++) {
+            const btn = document.createElement('button');
+            btn.className = 'day-btn';
+            btn.textContent = `Day ${day}`;
+            btn.onclick = () => showDay(day);
+            daySelector.appendChild(btn);
+        }
+
+        function showDay(day) {
+            // Update active button
+            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.day-btn')[day - 1].classList.add('active');
+
+            // Clear previous markers and routes
+            currentMarkers.forEach(marker => map.removeLayer(marker));
+            currentMarkers = [];
+            if (currentLayer) {
+                map.removeLayer(currentLayer);
+            }
+
+            const dayData = itineraryData[day];
+            if (!dayData) return;
+
+            // Show day details
+            const detailsDiv = document.getElementById('dayDetails');
+            detailsDiv.innerHTML = `
+                <div class="day-title">${dayData.title}</div>
+                <div class="route-info">
+                    <strong>🚗 Transportation:</strong><br>
+                    ${dayData.routes.map(route => 
+                        `${route.from} → ${route.to} (${route.transport}, ${route.duration})`
+                    ).join('<br>')}
+                </div>
+                <div style="margin: 1rem 0;">
+                    ${dayData.transportation.map(t => `<span class="transportation">${t}</span>`).join('')}
+                </div>
+                <div>
+                    <strong>📍 Highlights:</strong>
+                    <ul class="highlights">
+                        ${dayData.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+
+            // Add markers and focus map
+            const location = destinations[dayData.location];
+            if (location) {
+                const marker = L.marker(location, {
+                    icon: L.divIcon({
+                        className: 'custom-marker',
+                        html: `<div style="background: #e74c3c; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></div>`,
+                        iconSize: [20, 20],
+                        iconAnchor: [10, 10]
+                    })
+                }).addTo(map);
+                
+                marker.bindPopup(`
+                    <strong>${dayData.title}</strong><br>
+                    ${dayData.highlights.slice(0, 3).join('<br>')}
+                `);
+                
+                currentMarkers.push(marker);
+                map.setView(location, 10);
+            }
+
+            // Add route lines for multi-city days
+            if (day === 5) { // Tokyo to Fuji
+                drawRoute([destinations.tokyo, destinations.fuji], '#3498db');
+            } else if (day === 7) { // Fuji to Hakone
+                drawRoute([destinations.fuji, destinations.hakone], '#3498db');
+            } else if (day === 9) { // Hakone to Kyoto
+                drawRoute([destinations.hakone, destinations.kyoto], '#3498db');
+            } else if (day === 12) { // Kyoto to Nara
+                drawRoute([destinations.kyoto, destinations.nara], '#2ecc71');
+            } else if (day === 13) { // Kyoto to Osaka
+                drawRoute([destinations.kyoto, destinations.osaka], '#3498db');
+            } else if (day === 15) { // Osaka to Hiroshima
+                drawRoute([destinations.osaka, destinations.hiroshima], '#3498db');
+            } else if (day === 17) { // Hiroshima to Kanazawa
+                drawRoute([destinations.hiroshima, destinations.kanazawa], '#3498db');
+            } else if (day === 18) { // Kanazawa to Tokyo
+                drawRoute([destinations.kanazawa, destinations.tokyo], '#3498db');
+            }
+        }
+
+        function drawRoute(points, color) {
+            currentLayer = L.polyline(points, {
+                color: color,
+                weight: 4,
+                opacity: 0.8
+            }).addTo(map);
+        }
+
+        // Show first day by default
+        showDay(1);
+
+        // Add all destination markers as background
+        Object.entries(destinations).forEach(([name, coords]) => {
+            const marker = L.marker(coords, {
+                icon: L.divIcon({
+                    className: 'destination-marker',
+                    html: `<div style="background: #2ecc71; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; opacity: 0.7;"></div>`,
+                    iconSize: [12, 12],
+                    iconAnchor: [6, 6]
+                })
+            }).addTo(map);
+            
+            marker.bindTooltip(name.charAt(0).toUpperCase() + name.slice(1), {
+                permanent: false,
+                direction: 'top'
+            });
+        });
+    </script>
+</body>
+</html>
