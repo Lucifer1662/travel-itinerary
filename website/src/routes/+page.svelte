@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import { base } from '$app/paths';
 
 	let scheduleData = null;
 	let destinationsData = null;
@@ -15,8 +16,8 @@
 	onMount(async () => {
 		// Load data
 		const [scheduleResponse, destinationsResponse] = await Promise.all([
-			fetch('/db/schedule.json'),
-			fetch('/db/destinations.json')
+			fetch(`${base}/db/schedule.json`),
+			fetch(`${base}/db/destinations.json`)
 		]);
 		
 		scheduleData = await scheduleResponse.json();
@@ -28,7 +29,7 @@
 		// Load all place data for detailed activities
 		const placeIds = ['tokyo', 'fuji', 'hakone', 'kyoto', 'nara', 'osaka', 'hiroshima', 'kanazawa'];
 		const placePromises = placeIds.map(id => 
-			fetch(`/db/places/${id}.json`).then(r => r.json()).catch(() => null)
+			fetch(`${base}/db/places/${id}.json`).then(r => r.json()).catch(() => null)
 		);
 		const placeResults = await Promise.all(placePromises);
 		

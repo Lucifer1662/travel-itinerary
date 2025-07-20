@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import { base } from '$app/paths';
 
 	let placeData = null;
 	let map = null;
@@ -20,7 +21,7 @@
 
 	async function loadPlaceData() {
 		try {
-			const response = await fetch(`/db/places/${placeId}.json`);
+			const response = await fetch(`${base}/db/places/${placeId}.json`);
 			if (!response.ok) {
 				throw new Error('Place not found');
 			}
